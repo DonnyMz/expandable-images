@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Khand:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  font-family: "Khand", sans-serif;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.group {
+  background-color: rgb(35, 43, 49);
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 1rem;
+  color: #fff;
+  cursor: pointer;
+  margin: 2rem 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+  -webkit-transition: all 700ms ease-in;
+  padding: 1rem;
+}
+
+.group figcaption {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  opacity: 1;
+  color: rgb(35, 30, 41);
+  font-weight: 700;
+  background-color: rgba(240, 248, 255, 0.456);
+}
+
+.group.active {
+  flex: 5;
+  border-radius: 10px;
+}
+
+.group.active figcaption {
+  opacity: 1;
+  transition: opacity 0.5s ease-in 0.4s;
+  border-radius: 10px;
+}
+
+@media (min-width: 720px) {
+  .container {
+    display: flex;
+    width: 90%;
+  }
+  .group {
+    align-items: center;
+  }
+  .group figcaption {
+    opacity: 0;
+    border-radius: 10px;
+    width: 150px;
+  }
+}
